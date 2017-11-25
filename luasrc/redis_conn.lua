@@ -6,7 +6,7 @@ local function close_redis(red)
     local pool_size = 100
     local ok,err = red:set_keepalive(pool_max_idle_time,pool_size)
     if not ok then
-        ngx.say("set keepalive error: " err)
+        ngx.say("set keepalive error: ", err)
     end
 end
 
